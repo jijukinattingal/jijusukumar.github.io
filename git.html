@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Useful commands - REPO &amp; GIT"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-04-25T19:21+0100"/>
+<meta name="generated" content="2013-06-04"/>
 <meta name="author" content="Jiju Kinattingal"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -60,6 +60,7 @@
                                  font-weight:bold; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 <script type="text/javascript" src="http://orgmode.org/org-info.js">
 /**
  *
@@ -119,10 +120,10 @@ for the JavaScript code in this tag.
 */
 
 <!--/*--><![CDATA[/*><!--*/
-org_html_manager.set("TOC_DEPTH", "2");
-org_html_manager.set("LINK_HOME", "../~jijuk.html");
-org_html_manager.set("LINK_UP", "../~jijuk.html");
-org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "0");
 org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "underline");
 org_html_manager.set("FIXED_TOC", "0");
@@ -180,11 +181,6 @@ for the JavaScript code in this tag.
 
 </head>
 <body>
-<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
- <a accesskey="h" href="../~jijuk.html"> UP </a>
- |
- <a accesskey="H" href="../~jijuk.html"> HOME </a>
-</div>
 
 <div id="preamble">
 
@@ -197,81 +193,98 @@ for the JavaScript code in this tag.
 
 
 
+
+
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Repo init</a>
+<li><a href="#sec-1">1 Repo init</a>
 <ul>
-<li><a href="#sec-1-1">Repo init AU</a></li>
-<li><a href="#sec-1-2">Examples:</a></li>
+<li><a href="#sec-1-1">1.1 Repo init AU</a></li>
+<li><a href="#sec-1-2">1.2 Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">Repo sync</a>
+<li><a href="#sec-2">2 Repo sync</a>
 <ul>
-<li><a href="#sec-2-1">Sync only the object</a></li>
-<li><a href="#sec-2-2">Sync quickly</a></li>
+<li><a href="#sec-2-1">2.1 Sync only the object</a></li>
+<li><a href="#sec-2-2">2.2 Sync quickly</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">Cleanup unnecessary files and optimize the local repository</a></li>
-<li><a href="#sec-4">Show status:</a></li>
-<li><a href="#sec-5">Show commit logs</a>
+<li><a href="#sec-3">3 Cleanup unnecessary files and optimize the local repository</a></li>
+<li><a href="#sec-4">4 Show status:</a></li>
+<li><a href="#sec-5">5 Show commit logs</a>
 <ul>
-<li><a href="#sec-5-1">Examples:</a></li>
+<li><a href="#sec-5-1">5.1 Examples:</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1 Show branch/tag info</a></li>
+<li><a href="#sec-5-1-2">5.1.2 Grep a string in the git commit message</a></li>
+<li><a href="#sec-5-1-3">5.1.3 Graph</a></li>
+<li><a href="#sec-5-1-4">5.1.4 List of change between the AUS; export to xls sheet</a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="#sec-6">Show the files modified:</a>
+<li><a href="#sec-6">6 Show the files modified:</a>
 <ul>
-<li><a href="#sec-6-1">Examples:</a></li>
+<li><a href="#sec-6-1">6.1 Examples:</a>
+<ul>
+<li><a href="#sec-6-1-1">6.1.1 List all the files changed in a commit</a></li>
+<li><a href="#sec-6-1-2">6.1.2 List all the new files add in a commit</a></li>
+<li><a href="#sec-6-1-3">6.1.3 List all the modified files add in a commit</a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="#sec-7">Show diff</a>
+<li><a href="#sec-7">7 Show diff</a>
 <ul>
-<li><a href="#sec-7-1">Examples:</a></li>
+<li><a href="#sec-7-1">7.1 Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-8">Show what revision and author last modified each line of a file</a>
+<li><a href="#sec-8">8 Show what revision and author last modified each line of a file</a>
 <ul>
-<li><a href="#sec-8-1">Examples:</a></li>
+<li><a href="#sec-8-1">8.1 Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-9">Undo all changes in <b>A FILE</b></a></li>
-<li><a href="#sec-10">Fixing un-committed mistakes</a></li>
-<li><a href="#sec-11">Apply the patch</a></li>
-<li><a href="#sec-12">Check out a branch</a>
+<li><a href="#sec-9">9 Undo all changes in <b>A FILE</b></a></li>
+<li><a href="#sec-10">10 Fixing un-committed mistakes</a></li>
+<li><a href="#sec-11">11 Apply the patch</a></li>
+<li><a href="#sec-12">12 Check out a branch</a>
 <ul>
-<li><a href="#sec-12-1">Examples:</a></li>
+<li><a href="#sec-12-1">12.1 Examples:</a></li>
 </ul>
 </li>
-<li><a href="#sec-13">Create A BRANCH</a></li>
-<li><a href="#sec-14">How to upload a change</a></li>
-<li><a href="#sec-15">git push</a>
+<li><a href="#sec-13">13 Create A BRANCH</a></li>
+<li><a href="#sec-14">14 How to upload a change</a></li>
+<li><a href="#sec-15">15 git push</a>
 <ul>
-<li><a href="#sec-15-1">Example:-</a></li>
+<li><a href="#sec-15-1">15.1 Example:-</a></li>
 </ul>
 </li>
-<li><a href="#sec-16">Change author and commiter</a>
+<li><a href="#sec-16">16 Change author and commiter</a>
 <ul>
-<li><a href="#sec-16-1">Example:-</a></li>
+<li><a href="#sec-16-1">16.1 Example:-</a>
+<ul>
+<li><a href="#sec-16-1-1">16.1.1 To Change author:</a></li>
+<li><a href="#sec-16-1-2">16.1.2 To Change commiter:</a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="#sec-17">Delete branch</a>
+<li><a href="#sec-17">17 Delete branch</a>
 <ul>
-<li><a href="#sec-17-1">Delete all the local branches:</a></li>
+<li><a href="#sec-17-1">17.1 Delete all the local branches:</a></li>
 </ul>
 </li>
-<li><a href="#sec-18">Archive the files from a git project:</a></li>
-<li><a href="#sec-19">Checkout a file from the previous commit</a></li>
-<li><a href="#sec-20">git remote</a></li>
-<li><a href="#sec-21">Find the current branch</a></li>
-<li><a href="#sec-22">git fetch</a></li>
-<li><a href="#sec-23">Rebase</a></li>
+<li><a href="#sec-18">18 Archive the files from a git project:</a></li>
+<li><a href="#sec-19">19 Checkout a file from the previous commit</a></li>
+<li><a href="#sec-20">20 git remote</a></li>
+<li><a href="#sec-21">21 Find the current branch</a></li>
+<li><a href="#sec-22">22 git fetch</a></li>
+<li><a href="#sec-23">23 Rebase</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">Repo init</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Repo init</h2>
 <div class="outline-text-2" id="text-1">
 
 
@@ -295,7 +308,7 @@ repo init -u git://git.quicinc.com/platform/manifest.git -b jb_mr1
 </div>
 
 <div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1">Repo init AU</h3>
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Repo init AU</h3>
 <div class="outline-text-3" id="text-1-1">
 
 
@@ -316,7 +329,7 @@ Init to the AU and repo sync.
 </div>
 
 <div id="outline-container-1-2" class="outline-3">
-<h3 id="sec-1-2">Examples:</h3>
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Examples:</h3>
 <div class="outline-text-3" id="text-1-2">
 
 
@@ -334,7 +347,7 @@ Init to the AU and repo sync.
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2">Repo sync</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Repo sync</h2>
 <div class="outline-text-2" id="text-2">
 
 
@@ -342,7 +355,7 @@ Init to the AU and repo sync.
 </div>
 
 <div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1">Sync only the object</h3>
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Sync only the object</h3>
 <div class="outline-text-3" id="text-2-1">
 
 
@@ -358,7 +371,7 @@ Init to the AU and repo sync.
 </div>
 
 <div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2">Sync quickly</h3>
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Sync quickly</h3>
 <div class="outline-text-3" id="text-2-2">
 
 
@@ -375,7 +388,7 @@ Init to the AU and repo sync.
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3">Cleanup unnecessary files and optimize the local repository</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Cleanup unnecessary files and optimize the local repository</h2>
 <div class="outline-text-2" id="text-3">
 
 
@@ -394,7 +407,7 @@ git gc &ndash;auto
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">Show status:</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Show status:</h2>
 <div class="outline-text-2" id="text-4">
 
 
@@ -407,7 +420,7 @@ git status
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">Show commit logs</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Show commit logs</h2>
 <div class="outline-text-2" id="text-5">
 
 <p>git log
@@ -428,14 +441,14 @@ git status
 </div>
 
 <div id="outline-container-5-1" class="outline-3">
-<h3 id="sec-5-1">Examples:</h3>
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Examples:</h3>
 <div class="outline-text-3" id="text-5-1">
 
 
 </div>
 
 <div id="outline-container-5-1-1" class="outline-4">
-<h4 id="sec-5-1-1">Show branch/tag info</h4>
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Show branch/tag info</h4>
 <div class="outline-text-4" id="text-5-1-1">
 
 
@@ -450,7 +463,7 @@ git status
 </div>
 
 <div id="outline-container-5-1-2" class="outline-4">
-<h4 id="sec-5-1-2">Grep a string in the git commit message</h4>
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Grep a string in the git commit message</h4>
 <div class="outline-text-4" id="text-5-1-2">
 
 
@@ -465,7 +478,7 @@ git status
 </div>
 
 <div id="outline-container-5-1-3" class="outline-4">
-<h4 id="sec-5-1-3">Graph</h4>
+<h4 id="sec-5-1-3"><span class="section-number-4">5.1.3</span> Graph</h4>
 <div class="outline-text-4" id="text-5-1-3">
 
 
@@ -487,7 +500,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-5-1-4" class="outline-4">
-<h4 id="sec-5-1-4">List of change between the AUS; export to xls sheet</h4>
+<h4 id="sec-5-1-4"><span class="section-number-4">5.1.4</span> List of change between the AUS; export to xls sheet</h4>
 <div class="outline-text-4" id="text-5-1-4">
 
 
@@ -507,7 +520,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6">Show the files modified:</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> Show the files modified:</h2>
 <div class="outline-text-2" id="text-6">
 
 
@@ -522,7 +535,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1">Examples:</h3>
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Examples:</h3>
 <div class="outline-text-3" id="text-6-1">
 
 
@@ -530,7 +543,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-6-1-1" class="outline-4">
-<h4 id="sec-6-1-1">List all the files changed in a commit</h4>
+<h4 id="sec-6-1-1"><span class="section-number-4">6.1.1</span> List all the files changed in a commit</h4>
 <div class="outline-text-4" id="text-6-1-1">
 
 
@@ -546,7 +559,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-6-1-2" class="outline-4">
-<h4 id="sec-6-1-2">List all the new files add in a commit</h4>
+<h4 id="sec-6-1-2"><span class="section-number-4">6.1.2</span> List all the new files add in a commit</h4>
 <div class="outline-text-4" id="text-6-1-2">
 
 
@@ -562,7 +575,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-6-1-3" class="outline-4">
-<h4 id="sec-6-1-3">List all the modified files add in a commit</h4>
+<h4 id="sec-6-1-3"><span class="section-number-4">6.1.3</span> List all the modified files add in a commit</h4>
 <div class="outline-text-4" id="text-6-1-3">
 
 
@@ -580,7 +593,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-7" class="outline-2">
-<h2 id="sec-7">Show diff</h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> Show diff</h2>
 <div class="outline-text-2" id="text-7">
 
 
@@ -595,7 +608,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1">Examples:</h3>
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Examples:</h3>
 <div class="outline-text-3" id="text-7-1">
 
 
@@ -616,7 +629,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8">Show what revision and author last modified each line of a file</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> Show what revision and author last modified each line of a file</h2>
 <div class="outline-text-2" id="text-8">
 
 
@@ -631,7 +644,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-8-1" class="outline-3">
-<h3 id="sec-8-1">Examples:</h3>
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Examples:</h3>
 <div class="outline-text-3" id="text-8-1">
 
 
@@ -654,7 +667,7 @@ git log --branches --graph --color --decorate --oneline telephony/java/com/andro
 </div>
 
 <div id="outline-container-9" class="outline-2">
-<h2 id="sec-9">Undo all changes in <b>A FILE</b></h2>
+<h2 id="sec-9"><span class="section-number-2">9</span> Undo all changes in <b>A FILE</b></h2>
 <div class="outline-text-2" id="text-9">
 
 
@@ -677,7 +690,7 @@ git checkout HEAD^ -- filename
 </div>
 
 <div id="outline-container-10" class="outline-2">
-<h2 id="sec-10">Fixing un-committed mistakes</h2>
+<h2 id="sec-10"><span class="section-number-2">10</span> Fixing un-committed mistakes</h2>
 <div class="outline-text-2" id="text-10">
 
 
@@ -698,7 +711,7 @@ This will undo all the changes and return the entire working tree to the last co
 </div>
 
 <div id="outline-container-11" class="outline-2">
-<h2 id="sec-11">Apply the patch</h2>
+<h2 id="sec-11"><span class="section-number-2">11</span> Apply the patch</h2>
 <div class="outline-text-2" id="text-11">
 
 
@@ -721,7 +734,7 @@ filename.patch is a patch file generated by
 </div>
 
 <div id="outline-container-12" class="outline-2">
-<h2 id="sec-12">Check out a branch</h2>
+<h2 id="sec-12"><span class="section-number-2">12</span> Check out a branch</h2>
 <div class="outline-text-2" id="text-12">
 
 
@@ -732,7 +745,7 @@ git  checkout  &lt;branch name&gt;
 </div>
 
 <div id="outline-container-12-1" class="outline-3">
-<h3 id="sec-12-1">Examples:</h3>
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> Examples:</h3>
 <div class="outline-text-3" id="text-12-1">
 
 
@@ -752,7 +765,7 @@ To check out the main branch
 </div>
 
 <div id="outline-container-13" class="outline-2">
-<h2 id="sec-13">Create A BRANCH</h2>
+<h2 id="sec-13"><span class="section-number-2">13</span> Create A BRANCH</h2>
 <div class="outline-text-2" id="text-13">
 
 
@@ -769,7 +782,7 @@ Go the the git project and run this command to create a branch
 </div>
 
 <div id="outline-container-14" class="outline-2">
-<h2 id="sec-14">How to upload a change</h2>
+<h2 id="sec-14"><span class="section-number-2">14</span> How to upload a change</h2>
 <div class="outline-text-2" id="text-14">
 
 
@@ -827,7 +840,7 @@ To upload a patch (code change after review comments) in the gerrit
 </div>
 
 <div id="outline-container-15" class="outline-2">
-<h2 id="sec-15">git push</h2>
+<h2 id="sec-15"><span class="section-number-2">15</span> git push</h2>
 <div class="outline-text-2" id="text-15">
 
 
@@ -836,7 +849,7 @@ To upload a patch (code change after review comments) in the gerrit
 </div>
 
 <div id="outline-container-15-1" class="outline-3">
-<h3 id="sec-15-1">Example:-</h3>
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> Example:-</h3>
 <div class="outline-text-3" id="text-15-1">
 
 
@@ -857,7 +870,7 @@ If you want to push the new patch to a gerrit use the &lt;Gerrit id&gt; from <a 
 </div>
 
 <div id="outline-container-16" class="outline-2">
-<h2 id="sec-16">Change author and commiter</h2>
+<h2 id="sec-16"><span class="section-number-2">16</span> Change author and commiter</h2>
 <div class="outline-text-2" id="text-16">
 
 
@@ -865,14 +878,14 @@ If you want to push the new patch to a gerrit use the &lt;Gerrit id&gt; from <a 
 </div>
 
 <div id="outline-container-16-1" class="outline-3">
-<h3 id="sec-16-1">Example:-</h3>
+<h3 id="sec-16-1"><span class="section-number-3">16.1</span> Example:-</h3>
 <div class="outline-text-3" id="text-16-1">
 
 
 </div>
 
 <div id="outline-container-16-1-1" class="outline-4">
-<h4 id="sec-16-1-1">To Change author:</h4>
+<h4 id="sec-16-1-1"><span class="section-number-4">16.1.1</span> To Change author:</h4>
 <div class="outline-text-4" id="text-16-1-1">
 
 
@@ -887,7 +900,7 @@ If you want to push the new patch to a gerrit use the &lt;Gerrit id&gt; from <a 
 </div>
 
 <div id="outline-container-16-1-2" class="outline-4">
-<h4 id="sec-16-1-2">To Change commiter:</h4>
+<h4 id="sec-16-1-2"><span class="section-number-4">16.1.2</span> To Change commiter:</h4>
 <div class="outline-text-4" id="text-16-1-2">
 
 <p>Modify the mail id in ~/.gitconfig
@@ -901,7 +914,7 @@ and .git/config in the current git
 </div>
 
 <div id="outline-container-17" class="outline-2">
-<h2 id="sec-17">Delete branch</h2>
+<h2 id="sec-17"><span class="section-number-2">17</span> Delete branch</h2>
 <div class="outline-text-2" id="text-17">
 
 <p>git branch -D &lt;branch_name&gt;
@@ -910,7 +923,7 @@ and .git/config in the current git
 </div>
 
 <div id="outline-container-17-1" class="outline-3">
-<h3 id="sec-17-1">Delete all the local branches:</h3>
+<h3 id="sec-17-1"><span class="section-number-3">17.1</span> Delete all the local branches:</h3>
 <div class="outline-text-3" id="text-17-1">
 
 
@@ -929,7 +942,7 @@ git branch | g -v \* | xargs git branch -D
 </div>
 
 <div id="outline-container-18" class="outline-2">
-<h2 id="sec-18">Archive the files from a git project:</h2>
+<h2 id="sec-18"><span class="section-number-2">18</span> Archive the files from a git project:</h2>
 <div class="outline-text-2" id="text-18">
 
 
@@ -952,7 +965,7 @@ git archive --remote=jijuk@c-skolet-ics:/local/mnt/workspace/ICS_NEW/.repo/proje
 </div>
 
 <div id="outline-container-19" class="outline-2">
-<h2 id="sec-19">Checkout a file from the previous commit</h2>
+<h2 id="sec-19"><span class="section-number-2">19</span> Checkout a file from the previous commit</h2>
 <div class="outline-text-2" id="text-19">
 
 
@@ -975,7 +988,7 @@ git archive --remote=jijuk@c-skolet-ics:/local/mnt/workspace/ICS_NEW/.repo/proje
 </div>
 
 <div id="outline-container-20" class="outline-2">
-<h2 id="sec-20">git remote</h2>
+<h2 id="sec-20"><span class="section-number-2">20</span> git remote</h2>
 <div class="outline-text-2" id="text-20">
 
 
@@ -1006,7 +1019,7 @@ git cherry-pick 46030c5a814a68635f7fd088e3a51cf8adbfd4cb
 </div>
 
 <div id="outline-container-21" class="outline-2">
-<h2 id="sec-21">Find the current branch</h2>
+<h2 id="sec-21"><span class="section-number-2">21</span> Find the current branch</h2>
 <div class="outline-text-2" id="text-21">
 
 
@@ -1027,7 +1040,7 @@ git cherry-pick 46030c5a814a68635f7fd088e3a51cf8adbfd4cb
 </div>
 
 <div id="outline-container-22" class="outline-2">
-<h2 id="sec-22">git fetch</h2>
+<h2 id="sec-22"><span class="section-number-2">22</span> git fetch</h2>
 <div class="outline-text-2" id="text-22">
 
 
@@ -1046,7 +1059,7 @@ git checkout FETCH_HEAD
 </div>
 
 <div id="outline-container-23" class="outline-2">
-<h2 id="sec-23">Rebase</h2>
+<h2 id="sec-23"><span class="section-number-2">23</span> Rebase</h2>
 <div class="outline-text-2" id="text-23">
 
 <p>Instructions to rebase:
@@ -1077,7 +1090,7 @@ Replace "ssh://visweswa@review-android.quicinc.com:29418"  with "git://git.quici
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-04-25T19:21+0100</p>
+<p class="date">Date: 2013-06-04</p>
 <p class="author">Author: Jiju Kinattingal</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
