@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Useful commands - REPO &amp; GIT</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="Useful commands - REPO &amp; GIT"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-04-25T19:21+0100"/>
+<meta name="author" content="Jiju Kinattingal"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript" src="http://orgmode.org/org-info.js">
+/**
+ *
+ * @source: http://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012-2013  Sebastian Rose
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "2");
+org_html_manager.set("LINK_HOME", "../~jijuk.html");
+org_html_manager.set("LINK_UP", "../~jijuk.html");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
+ <a accesskey="h" href="../~jijuk.html"> UP </a>
+ |
+ <a accesskey="H" href="../~jijuk.html"> HOME </a>
+</div>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Useful commands - REPO &amp; GIT</h1>
+
+
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Repo init</a>
+<ul>
+<li><a href="#sec-1-1">Repo init AU</a></li>
+<li><a href="#sec-1-2">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">Repo sync</a>
+<ul>
+<li><a href="#sec-2-1">Sync only the object</a></li>
+<li><a href="#sec-2-2">Sync quickly</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">Cleanup unnecessary files and optimize the local repository</a></li>
+<li><a href="#sec-4">Show status:</a></li>
+<li><a href="#sec-5">Show commit logs</a>
+<ul>
+<li><a href="#sec-5-1">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">Show the files modified:</a>
+<ul>
+<li><a href="#sec-6-1">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">Show diff</a>
+<ul>
+<li><a href="#sec-7-1">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">Show what revision and author last modified each line of a file</a>
+<ul>
+<li><a href="#sec-8-1">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">Undo all changes in <b>A FILE</b></a></li>
+<li><a href="#sec-10">Fixing un-committed mistakes</a></li>
+<li><a href="#sec-11">Apply the patch</a></li>
+<li><a href="#sec-12">Check out a branch</a>
+<ul>
+<li><a href="#sec-12-1">Examples:</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">Create A BRANCH</a></li>
+<li><a href="#sec-14">How to upload a change</a></li>
+<li><a href="#sec-15">git push</a>
+<ul>
+<li><a href="#sec-15-1">Example:-</a></li>
+</ul>
+</li>
+<li><a href="#sec-16">Change author and commiter</a>
+<ul>
+<li><a href="#sec-16-1">Example:-</a></li>
+</ul>
+</li>
+<li><a href="#sec-17">Delete branch</a>
+<ul>
+<li><a href="#sec-17-1">Delete all the local branches:</a></li>
+</ul>
+</li>
+<li><a href="#sec-18">Archive the files from a git project:</a></li>
+<li><a href="#sec-19">Checkout a file from the previous commit</a></li>
+<li><a href="#sec-20">git remote</a></li>
+<li><a href="#sec-21">Find the current branch</a></li>
+<li><a href="#sec-22">git fetch</a></li>
+<li><a href="#sec-23">Rebase</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Repo init</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+repo init -u git://git.quicinc.com/platform/manifest.git -b jb_mr1
+</p>
+
+
+
+<pre class="example">repo init -u git://git.quicinc.com/platform/manifest.git -b jb_mr1
+</pre>
+
+
+
+<pre class="example">print "foo"
+</pre>
+
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">Repo init AU</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+
+<p>
+Init to the AU and repo sync.
+</p>
+
+
+
+<pre class="example">repo init -u URL -b refs/tags/TAG_NAME -m versioned.xml
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2">Examples:</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+
+
+
+<pre class="example">repo init -u git://git.quicinc.com/platform/manifest.git -b refs/tags/AU_LINUX_ANDROID_KK_3.5_RB1.04.04.02.006.075 -m versioned.xml
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Repo sync</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">Sync only the object</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+
+
+
+<pre class="example">repo sync --network-only
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">Sync quickly</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+
+
+
+<pre class="example">repo sync -n --no-tags -j4 &amp;&amp; repo sync -l --no-tags -j4
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Cleanup unnecessary files and optimize the local repository</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+git gc &ndash;auto
+</p>
+
+
+<pre class="example">repo forall -c 'git gc --auto'
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Show status:</h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+git status
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Show commit logs</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>git log
+  show recent commits, most recent on top. Useful options:
+  &ndash;color       with color
+  &ndash;graph       with an ASCII-art commit graph on the left
+  &ndash;grep        grep
+  &ndash;decorate    with branch and tag names on appropriate commits
+  &ndash;stat        with stats (files changed, insertions, and deletions)
+  -p            with full diffs
+  &ndash;author=foo  only by a certain author
+  &ndash;after="MMM DD YYYY" ex. ("Jun 20 2008") only commits after a certain date
+  &ndash;before="MMM DD YYYY" only commits that occur before a certain date
+  &ndash;merge       only the commits involved in the current merge conflicts
+</p>
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1">Examples:</h3>
+<div class="outline-text-3" id="text-5-1">
+
+
+</div>
+
+<div id="outline-container-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1">Show branch/tag info</h4>
+<div class="outline-text-4" id="text-5-1-1">
+
+
+
+
+<pre class="example">git log --decorate
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2">Grep a string in the git commit message</h4>
+<div class="outline-text-4" id="text-5-1-2">
+
+
+
+
+<pre class="example">git log --grep="DSDS"
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-1-3" class="outline-4">
+<h4 id="sec-5-1-3">Graph</h4>
+<div class="outline-text-4" id="text-5-1-3">
+
+
+
+
+
+<pre class="example">git log --graph --color --decorate --abbrev-commit telephony/java/com/android/internal/telephony/gsm/GsmDataConnectionTracker.java
+
+git log --graph --color --decorate --pretty=oneline telephony/java/com/android/internal/telephony/gsm/GsmDataConnectionTracker.java
+
+git log --graph --color --decorate --oneline telephony/java/com/android/internal/telephony/gsm/GsmDataConnectionTracker.java
+
+git log --branches --graph --color --decorate --oneline telephony/java/com/android/internal/telephony/gsm/GsmDataConnectionTracker.java
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-1-4" class="outline-4">
+<h4 id="sec-5-1-4">List of change between the AUS; export to xls sheet</h4>
+<div class="outline-text-4" id="text-5-1-4">
+
+
+
+
+
+<pre class="example">git log --no-merges AU_LINUX_ANDROID_JB_2.5.04.02.02.040.400..AU_LINUX_ANDROID_JB_2.5.04.02.02.040.443 --date=short --pretty=format:"%H%x09%an%x09%ad%x09%s" &gt; commitLog.xls
+</pre>
+
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">Show the files modified:</h2>
+<div class="outline-text-2" id="text-6">
+
+
+
+
+
+<pre class="example">git show --pretty="format:" --name-only &lt;sha&gt;
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1">Examples:</h3>
+<div class="outline-text-3" id="text-6-1">
+
+
+
+</div>
+
+<div id="outline-container-6-1-1" class="outline-4">
+<h4 id="sec-6-1-1">List all the files changed in a commit</h4>
+<div class="outline-text-4" id="text-6-1-1">
+
+
+
+
+
+<pre class="example">git show --pretty="format:" --name-only 4b29d6554c26c5537425159a1f61c1c8e03d9045
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-1-2" class="outline-4">
+<h4 id="sec-6-1-2">List all the new files add in a commit</h4>
+<div class="outline-text-4" id="text-6-1-2">
+
+
+
+
+
+<pre class="example">git show --pretty="format:" --name-only --diff-filter=A 4b29d6554c26c5537425159a1f61c1c8e03d9045
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-1-3" class="outline-4">
+<h4 id="sec-6-1-3">List all the modified files add in a commit</h4>
+<div class="outline-text-4" id="text-6-1-3">
+
+
+
+
+<pre class="example">git show --pretty="format:" --name-only --diff-filter=M 4b29d6554c26c5537425159a1f61c1c8e03d9045
+</pre>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7">Show diff</h2>
+<div class="outline-text-2" id="text-7">
+
+
+
+
+
+<pre class="example">git-diff - Show changes between commits, commit and working tree, etc
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1">Examples:</h3>
+<div class="outline-text-3" id="text-7-1">
+
+
+
+
+
+<pre class="example">git diff -w m/eclair
+</pre>
+
+
+<p>
+-w : ignore all white spaces
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8">Show what revision and author last modified each line of a file</h2>
+<div class="outline-text-2" id="text-8">
+
+
+
+
+
+<pre class="example">git-blame - Show what revision and author last modified each line of a file
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1">Examples:</h3>
+<div class="outline-text-3" id="text-8-1">
+
+
+
+
+
+<pre class="example">git blame -w StkService.java
+</pre>
+
+
+<p>
+-w : ignore all white spaces
+</p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9">Undo all changes in <b>A FILE</b></h2>
+<div class="outline-text-2" id="text-9">
+
+
+
+
+
+<pre class="example">git checkout -- filename
+git checkout HEAD^ -- filename
+</pre>
+
+
+<p>
+<i>Reference:</i>
+/<a href="http://stackoverflow.com/questions/692246/git-how-to-undo-changes-of-one-file/">http://stackoverflow.com/questions/692246/git-how-to-undo-changes-of-one-file/</a>
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10">Fixing un-committed mistakes</h2>
+<div class="outline-text-2" id="text-10">
+
+
+
+
+
+<pre class="example">git reset --hard HEAD
+</pre>
+
+
+<p>
+This will undo all the changes and return the entire working tree to the last committed state 
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11">Apply the patch</h2>
+<div class="outline-text-2" id="text-11">
+
+
+
+
+
+
+<pre class="example">patch   -p1   &lt;  filename.patch 
+
+where 
+filename.patch is a patch file generated by
+        git diff &gt; filename.patch  or
+        git show &lt;sha id&gt; &gt; filename.patch 
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12">Check out a branch</h2>
+<div class="outline-text-2" id="text-12">
+
+
+<p>
+git  checkout  &lt;branch name&gt;
+</p>
+
+</div>
+
+<div id="outline-container-12-1" class="outline-3">
+<h3 id="sec-12-1">Examples:</h3>
+<div class="outline-text-3" id="text-12-1">
+
+
+<p>
+To check out the main branch
+</p>
+
+
+<pre class="example">git  checkout  m/eclair
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-2">
+<h2 id="sec-13">Create A BRANCH</h2>
+<div class="outline-text-2" id="text-13">
+
+
+<p>
+repo  start &lt;branch_name&gt;  .
+</p>
+<p>
+Go the the git project and run this command to create a branch
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-2">
+<h2 id="sec-14">How to upload a change</h2>
+<div class="outline-text-2" id="text-14">
+
+
+
+<ol>
+<li>Create a branch
+
+<p>
+   repo start &lt;branch-name&gt; .
+</p>
+</li>
+<li>Modifiy the files
+
+</li>
+<li>Commit the changes 
+
+<p>
+  git commit -a
+</p>
+<p>
+  Give the below details:
+</p>
+<p>
+  module: Brief desciption of changes
+</p>
+<p>
+  Description
+</p>
+<p>
+  CRs-Fixed: CR# 
+</p>
+</li>
+<li>repo upload .
+</li>
+</ol>
+
+
+
+<p>
+To upload a patch (code change after review comments) in the gerrit
+</p>
+<ol>
+<li>git commit &ndash;amend -a
+  Optional: change the description.
+</li>
+<li>repo upload .
+</li>
+</ol>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-15" class="outline-2">
+<h2 id="sec-15">git push</h2>
+<div class="outline-text-2" id="text-15">
+
+
+
+
+</div>
+
+<div id="outline-container-15-1" class="outline-3">
+<h3 id="sec-15-1">Example:-</h3>
+<div class="outline-text-3" id="text-15-1">
+
+
+
+
+
+<pre class="example">git push ssh://review-android.quicinc.com:29418/platform/hardware/ril.git HEAD:refs/changes/&lt;gerrit id&gt;
+</pre>
+
+
+<p>
+If you want to push the new patch to a gerrit use the &lt;Gerrit id&gt; from <a href="https://review-android.quicinc.com/#/c/">https://review-android.quicinc.com/#/c/</a>&lt;gerrit id&gt;
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-16" class="outline-2">
+<h2 id="sec-16">Change author and commiter</h2>
+<div class="outline-text-2" id="text-16">
+
+
+
+</div>
+
+<div id="outline-container-16-1" class="outline-3">
+<h3 id="sec-16-1">Example:-</h3>
+<div class="outline-text-3" id="text-16-1">
+
+
+</div>
+
+<div id="outline-container-16-1-1" class="outline-4">
+<h4 id="sec-16-1-1">To Change author:</h4>
+<div class="outline-text-4" id="text-16-1-1">
+
+
+
+
+<pre class="example">git commit --amend --author="Jiju Kinattingal &lt;jijuk@codeaurora.org&gt;"
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-16-1-2" class="outline-4">
+<h4 id="sec-16-1-2">To Change commiter:</h4>
+<div class="outline-text-4" id="text-16-1-2">
+
+<p>Modify the mail id in ~/.gitconfig
+and .git/config in the current git
+</p>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-17" class="outline-2">
+<h2 id="sec-17">Delete branch</h2>
+<div class="outline-text-2" id="text-17">
+
+<p>git branch -D &lt;branch_name&gt;
+</p>
+
+</div>
+
+<div id="outline-container-17-1" class="outline-3">
+<h3 id="sec-17-1">Delete all the local branches:</h3>
+<div class="outline-text-3" id="text-17-1">
+
+
+
+
+
+<pre class="example">git checkout m/jb_2.5
+git branch | g -v \* | xargs git branch -D
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-18" class="outline-2">
+<h2 id="sec-18">Archive the files from a git project:</h2>
+<div class="outline-text-2" id="text-18">
+
+
+
+
+
+<pre class="example">git archive --remote=/local/mnt/workspace/code/ics/.repo/projects/packages/apps/Stk.git/ m/ics | tar -x -C test
+git archive --remote=jijuk@c-skolet-ics:/local/mnt/workspace/ICS_NEW/.repo/projects/packages/apps/Stk.git/ m/ics | tar -x -C test
+</pre>
+
+
+<p>
+&ndash;remote can be local directory or dir from remote machine using ssh
+</p>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-19" class="outline-2">
+<h2 id="sec-19">Checkout a file from the previous commit</h2>
+<div class="outline-text-2" id="text-19">
+
+
+
+
+
+<pre class="example">git checkout HEAD~1 path/to/file.ext
+</pre>
+
+
+<p>
+<i>Reference:</i>
+/<a href="http://stackoverflow.com/questions/900560/git-checking-out-a-file-from-a-previous-commit-and-amending-it-to-head/">http://stackoverflow.com/questions/900560/git-checking-out-a-file-from-a-previous-commit-and-amending-it-to-head/</a>
+</p>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-20" class="outline-2">
+<h2 id="sec-20">git remote</h2>
+<div class="outline-text-2" id="text-20">
+
+
+<p>
+git remote
+        To list the remotes
+</p>
+<p>
+ git remote add jijuk-uploadRepo /local/mnt/workspace/code/multi_sim/uploadRepo/frameworks/opt/telephony
+        Add the repo project as remote with name "jijuk-uploadRepo"
+</p>
+<p>        
+git fetch jijuk-uploadRepo
+        To get the remote project to this.
+</p>
+
+<p>
+git checkout alex/mr1_prep
+</p>
+<p>
+git cherry-pick 46030c5a814a68635f7fd088e3a51cf8adbfd4cb
+        To cherry-pick a change from the remote repo. (commit hash from the remote  jijuk-uploadRepo/multiSim_Dec31
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-21" class="outline-2">
+<h2 id="sec-21">Find the current branch</h2>
+<div class="outline-text-2" id="text-21">
+
+
+
+
+
+<pre class="example">git describe --all
+</pre>
+
+
+<p>
+<i>Reference:</i>
+/<a href="http://stackoverflow.com/questions/6245570/get-current-branch-name">http://stackoverflow.com/questions/6245570/get-current-branch-name</a>/
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-22" class="outline-2">
+<h2 id="sec-22">git fetch</h2>
+<div class="outline-text-2" id="text-22">
+
+
+
+
+
+<pre class="example">git init
+git fetch ssh://review-android.quicinc.com:29418/platform/vendor/qcom-proprietary/ship/qcril refs/heads/kk_2.7
+git checkout FETCH_HEAD
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-23" class="outline-2">
+<h2 id="sec-23">Rebase</h2>
+<div class="outline-text-2" id="text-23">
+
+<p>Instructions to rebase:
+</p>
+<p>
+   "Create a new directory and 'cd' to it."
+</p>
+
+
+
+<pre class="example">git init
+git fetch ssh://review-android.quicinc.com:29418/platform/vendor/qcom-proprietary/ship/qcril refs/heads/kk_2.7
+git checkout FETCH_HEAD
+git fetch ssh://review-android.quicinc.com:29418/platform/vendor/qcom-proprietary/ship/qcril refs/changes/34/623534/1
+git cherry-pick FETCH_HEAD
+"Modify files that have conflicts."
+git add .
+git commit -c FETCH_HEAD
+git push ssh://review-android.quicinc.com:29418/platform/vendor/qcom-proprietary/ship/qcril HEAD:refs/changes/623534
+</pre>
+
+
+<p>
+Replace "ssh://visweswa@review-android.quicinc.com:29418"  with "git://git.quicinc.com", this will get your changes pulled faster and no need to rely on Server. (which inturn reduces load on server)
+</p>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-04-25T19:21+0100</p>
+<p class="author">Author: Jiju Kinattingal</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
