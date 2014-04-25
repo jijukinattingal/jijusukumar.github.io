@@ -61,77 +61,6 @@
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-<script type="text/javascript" src="http://orgmode.org/org-info.js">
-/**
- *
- * @source: http://orgmode.org/org-info.js
- *
- * @licstart  The following is the entire license notice for the
- *  JavaScript code in http://orgmode.org/org-info.js.
- *
- * Copyright (C) 2012-2013  Sebastian Rose
- *
- *
- * The JavaScript code in this tag is free software: you can
- * redistribute it and/or modify it under the terms of the GNU
- * General Public License (GNU GPL) as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option)
- * any later version.  The code is distributed WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
- *
- * As additional permission under GNU GPL version 3 section 7, you
- * may distribute non-source (e.g., minimized or compacted) forms of
- * that code without the copy of the GNU GPL normally required by
- * section 4, provided you include this license notice and a URL
- * through which recipients can access the Corresponding Source.
- *
- * @licend  The above is the entire license notice
- * for the JavaScript code in http://orgmode.org/org-info.js.
- *
- */
-</script>
-
-<script type="text/javascript">
-
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-
-<!--/*--><![CDATA[/*><!--*/
-org_html_manager.set("TOC_DEPTH", "1");
-org_html_manager.set("LINK_HOME", "");
-org_html_manager.set("LINK_UP", "");
-org_html_manager.set("LOCAL_TOC", "0");
-org_html_manager.set("VIEW_BUTTONS", "0");
-org_html_manager.set("MOUSE_HINT", "underline");
-org_html_manager.set("FIXED_TOC", "0");
-org_html_manager.set("TOC", "1");
-org_html_manager.set("VIEW", "showall");
-org_html_manager.setup();  // activate after the parameters are set
-/*]]>*///-->
-</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -199,80 +128,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 Repo init</a>
-<ul>
-<li><a href="#sec-1-1">1.1 Repo init AU</a></li>
-<li><a href="#sec-1-2">1.2 Examples:</a></li>
-</ul>
-</li>
-<li><a href="#sec-2">2 Repo sync</a>
-<ul>
-<li><a href="#sec-2-1">2.1 Sync only the object</a></li>
-<li><a href="#sec-2-2">2.2 Sync quickly</a></li>
-</ul>
-</li>
+<li><a href="#sec-1">1 Repo init</a></li>
+<li><a href="#sec-2">2 Repo sync</a></li>
 <li><a href="#sec-3">3 Cleanup unnecessary files and optimize the local repository</a></li>
 <li><a href="#sec-4">4 Show status:</a></li>
-<li><a href="#sec-5">5 Show commit logs</a>
-<ul>
-<li><a href="#sec-5-1">5.1 Examples:</a>
-<ul>
-<li><a href="#sec-5-1-1">5.1.1 Show branch/tag info</a></li>
-<li><a href="#sec-5-1-2">5.1.2 Grep a string in the git commit message</a></li>
-<li><a href="#sec-5-1-3">5.1.3 Graph</a></li>
-<li><a href="#sec-5-1-4">5.1.4 List of change between the AUS; export to xls sheet</a></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-6">6 Show the files modified:</a>
-<ul>
-<li><a href="#sec-6-1">6.1 Examples:</a>
-<ul>
-<li><a href="#sec-6-1-1">6.1.1 List all the files changed in a commit</a></li>
-<li><a href="#sec-6-1-2">6.1.2 List all the new files add in a commit</a></li>
-<li><a href="#sec-6-1-3">6.1.3 List all the modified files add in a commit</a></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-7">7 Show diff</a>
-<ul>
-<li><a href="#sec-7-1">7.1 Examples:</a></li>
-</ul>
-</li>
-<li><a href="#sec-8">8 Show what revision and author last modified each line of a file</a>
-<ul>
-<li><a href="#sec-8-1">8.1 Examples:</a></li>
-</ul>
-</li>
+<li><a href="#sec-5">5 Show commit logs</a></li>
+<li><a href="#sec-6">6 Show the files modified:</a></li>
+<li><a href="#sec-7">7 Show diff</a></li>
+<li><a href="#sec-8">8 Show what revision and author last modified each line of a file</a></li>
 <li><a href="#sec-9">9 Undo all changes in <b>A FILE</b></a></li>
 <li><a href="#sec-10">10 Fixing un-committed mistakes</a></li>
 <li><a href="#sec-11">11 Apply the patch</a></li>
-<li><a href="#sec-12">12 Check out a branch</a>
-<ul>
-<li><a href="#sec-12-1">12.1 Examples:</a></li>
-</ul>
-</li>
+<li><a href="#sec-12">12 Check out a branch</a></li>
 <li><a href="#sec-13">13 Create A BRANCH</a></li>
 <li><a href="#sec-14">14 How to upload a change</a></li>
-<li><a href="#sec-15">15 git push</a>
-<ul>
-<li><a href="#sec-15-1">15.1 Example:-</a></li>
-</ul>
-</li>
-<li><a href="#sec-16">16 Change author and commiter</a>
-<ul>
-<li><a href="#sec-16-1">16.1 Example:-</a>
-<ul>
-<li><a href="#sec-16-1-1">16.1.1 To Change author:</a></li>
-<li><a href="#sec-16-1-2">16.1.2 To Change commiter:</a></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-17">17 Delete branch</a>
-<ul>
-<li><a href="#sec-17-1">17.1 Delete all the local branches:</a></li>
-</ul>
-</li>
+<li><a href="#sec-15">15 git push</a></li>
+<li><a href="#sec-16">16 Change author and commiter</a></li>
+<li><a href="#sec-17">17 Delete branch</a></li>
 <li><a href="#sec-18">18 Archive the files from a git project:</a></li>
 <li><a href="#sec-19">19 Checkout a file from the previous commit</a></li>
 <li><a href="#sec-20">20 git remote</a></li>
@@ -1083,7 +955,7 @@ git push ssh://review-android.quicinc.com:29418/platform/vendor/qcom-proprietary
 
 
 <p>
-Replace "ssh://visweswa@review-android.quicinc.com:29418"  with "git://git.quicinc.com", this will get your changes pulled faster and no need to rely on Server. (which inturn reduces load on server)
+Replace "ssh://jijuk@review-android.quicinc.com:29418"  with "git://git.quicinc.com", this will get your changes pulled faster and no need to rely on Server. (which inturn reduces load on server)
 </p>
 </div>
 </div>
